@@ -3,9 +3,6 @@ import re
 import astropy.units as u
 
 class MagphysOutput(object):
-    """
-    potato potato potato
-    """
     
     def __init__(self, fitfilename, sedfilename, z_type = 'spec'):
         """
