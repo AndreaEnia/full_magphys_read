@@ -5,7 +5,7 @@ Usage:
 
 ```python
 import full_magphys_read
-z_type = 'spec' or 'phot', if you know other ways to measure galaxy redshifts let me know 
+z_type = 'spec' # or 'phot', if you know other ways to measure galaxy redshifts let me know 
 results = full_magphys_read.MagphysOutput(path_to_fit, path_to_sed, z_type = z_type)
 ```
 
