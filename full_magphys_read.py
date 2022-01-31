@@ -9,7 +9,7 @@ class MagphysOutput(object):
     
     def __init__(self, fitfilename, sedfilename, z_type = 'spec'):
         """
-        potato potato potato
+        Input: paths to .sed and .fit files, type of source redshift ('phot' or 'spec')
         """
         fitfile = open(fitfilename)
         sedfile = open(sedfilename)
@@ -103,6 +103,7 @@ class MagphysOutput(object):
             self.sed_model = np.array(model_sed,dtype=float)
             self.sed_model_logwaves = self.sed_model[:,0] * u.dex(u.AA)
             self.sed_model_logluminosity_lambda = self.sed_model[:,1] * u.Jy
+        else: raise ValueError('Give a proper name for the z_kind, e.g. spec or phot')
           
     @staticmethod
     def clean_param_names(paramname):
